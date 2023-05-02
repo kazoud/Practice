@@ -1,3 +1,3 @@
 # Practice
 
-Problems from Leetcode and CTCI + some knowledge content
+Problems from CTCI/Leetcode + some knowledge content

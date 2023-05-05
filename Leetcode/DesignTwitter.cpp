@@ -7,7 +7,7 @@
 #include <unordered_set>
 using namespace std;
 
-struct greaterThan{
+struct smallerThan{
   bool operator()(const array<int,3>& a, const array<int,3>& b)
   {
       return a[0] < b[0];
@@ -18,7 +18,7 @@ class Twitter {
 private:
     int order = 0;
     unordered_map<int,unordered_set<int>> followings;
-    priority_queue<array<int,3>, std::vector<std::array<int, 3>>, greaterThan > timeline;
+    priority_queue<array<int,3>, std::vector<std::array<int, 3>>, smallerThan > timeline;
 public:
     Twitter() {
         
@@ -30,7 +30,7 @@ public:
     
     vector<int> getNewsFeed(int userId) {
         vector<int> newsFeed;
-        priority_queue<array<int,3>, std::vector<std::array<int, 3>>, greaterThan > userTimeline(timeline);
+        priority_queue<array<int,3>, std::vector<std::array<int, 3>>, smallerThan > userTimeline(timeline);
         int n = 0;
         while(!userTimeline.empty() and n < 10) {
             array<int,3> topfeed = userTimeline.top();

@@ -1,2 +1,5 @@
 # Practice
-Problems from CTCI/Leetcode + some knowledge content
+
+## Helpful
+
+Define a custom ordering for a priority queue: Leetcode -> DesignTwitter.cpp

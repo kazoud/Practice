@@ -12,6 +12,6 @@ AVL Trees -> Miscellaneous
 
 Gayle Laakmann McDowell, Cracking the Coding Interview: 189 Programming Questions and Solutions 6th Edition
 
-[Leetcode] (https://leetcode.com)
+[Leetcode] [https://leetcode.com]
 
-[GeeksForGeeks] (https://www.geeksforgeeks.org) 
+[GeeksForGeeks] [https://www.geeksforgeeks.org]

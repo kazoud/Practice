@@ -59,6 +59,32 @@ void BFS(GraphNode* g)
     }
 }
 
+void TopologicalDFS(GraphNode* node, vector<GraphNode*>& topologicalSort)
+{
+    node->visited = true;
+    for (GraphNode* n : node->adjacency)
+    {
+        if (!n->visited)
+        {
+            TopologicalDFS(n,topologicalSort);
+        }
+    }
+    topologicalSort.insert(topologicalSort.begin(), node); //inefficient, should use a stack, deque or a linked list
+}
+
+vector<GraphNode*> TopologicalSort(Graph* g)
+{
+    vector<GraphNode*> topologicalSort;
+    for (auto node : g->nodes)
+    {
+        if (!node->visited)
+        {
+            TopologicalDFS(node, topologicalSort);
+        }
+    }
+    return topologicalSort;
+}
+
 Graph* CreateGenericGraph(int nodes, int edges)
 {
     Graph* graph = new Graph();
